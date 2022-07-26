@@ -1,11 +1,11 @@
+import React from "react";
+import NavBar from "./NavBar";
 import "../styles/app.css";
 
 const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Surreal Estate</p>
-      </header>
+      <NavBar />
     </div>
   );
 };
