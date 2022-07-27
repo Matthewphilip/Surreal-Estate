@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "../styles/add-property.css";
 
 const AddProperty = () => {
@@ -15,7 +16,10 @@ const AddProperty = () => {
 
   const handleAddProperty = (event) => {
     event.preventDefault();
-    console.log(fields);
+    axios
+      .post(`http://localhost:3000/api/v1/PropertyListing/`, { ...fields })
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
   };
 
   const handleFieldChange = (event) => {
@@ -111,11 +115,11 @@ const AddProperty = () => {
             value={fields.price}
             onChange={handleFieldChange}
           >
-            <option value="50,000">50,000</option>
-            <option value="100,000">100,000</option>
-            <option value="150,000">150,000</option>
-            <option value="200,000">200,000</option>
-            <option value="250,000">250,000</option>
+            <option value="5000">50,000</option>
+            <option value="10000">100,000</option>
+            <option value="15000">150,000</option>
+            <option value="20000">200,000</option>
+            <option value="25000">250,000</option>
           </select>
         </label>
 
