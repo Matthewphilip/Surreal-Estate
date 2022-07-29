@@ -9,7 +9,10 @@ const AddProperty = () => {
       title: "",
       city: "Manchester",
       type: "Cottage",
-      bedrooms: "2",
+      bedrooms: "",
+      bathrooms: "",
+      price: "",
+      email: "",
     },
     alert: {
       message: "",
