@@ -22,8 +22,11 @@ const Properties = () => {
   }, []);
 
   return (
-    <div>
-      <Alert message={alert.message} success={alert.isSuccess} />
+    <div className="properties">
+      <div className="properties-alert">
+        <Alert message={alert.message} success={alert.isSuccess} />
+      </div>
+      <h2>Properties</h2>
       <div className="properties-grid">
         {properties.map((property) => (
           <PropertyCard key={property._id} {...property} />
