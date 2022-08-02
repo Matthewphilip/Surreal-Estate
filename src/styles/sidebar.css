@@ -1,0 +1,19 @@
+.sidebar {
+  display: flex;
+  background-color: white;
+  width: 150px;
+  border-right: 2px outset grey;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+}
+
+.sidebar-links-item {
+  display: flex;
+  text-decoration: none;
+  color: darkslategrey;
+  font-size: 18px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 10px;
+  padding: 5px;
+}
