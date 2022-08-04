@@ -1,10 +1,40 @@
 .property-card {
-  background: #e0c97d;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 10px;
+  padding-left: 10px;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  /* grid-template-rows: 15% 55% 10% 20%; */
+  grid-auto-rows: auto;
 }
 
 .property-card__list {
   list-style: none;
   padding: 1rem;
+}
+
+.type-city {
+  font-style: italic;
+}
+
+.email-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  .property-card {
+    text-align: center;
+    padding: 0;
+  }
+
+  .property-card__list {
+    text-align: center;
+    padding: 0;
+  }
 }

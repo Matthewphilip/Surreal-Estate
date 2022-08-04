@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBath, faBed } from "@fortawesome/free-solid-svg-icons";
 import Alert from "./Alert";
 import "../styles/add-property.css";
 
@@ -50,27 +52,29 @@ const AddProperty = () => {
 
   return (
     <div className="add-property">
-      Add Property
-      <form onSubmit={handleAddProperty}>
+      <h3 className="heading">Add Property</h3>
+      <form onSubmit={handleAddProperty} className="add-property__form">
         <Alert message={alert.message} success={alert.isSuccess} />
+
         <label htmlFor="title">
-          Title
           <input
+            className="add-property__item property-input"
             id="title"
             name="title"
             value={fields.title}
             onChange={handleFieldChange}
-            placeholder="3-bed Semi-Detached"
+            placeholder="Property title"
           />
         </label>
 
         <label htmlFor="city">
-          City
           <select
+            className="add-property__item"
             id="city"
             name="city"
             value={fields.city}
             onChange={handleFieldChange}
+            placeholder="City"
           >
             <option value="Manchester">Manchester</option>
             <option value="Leeds">Leeds</option>
@@ -80,13 +84,13 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="type">
-          Property Type
           <select
+            className="add-property__item"
             id="type"
             name="type"
             value={fields.type}
             onChange={handleFieldChange}
-            placeholder="Cottage"
+            placeholder="Detached"
           >
             <option value="Flat">Flat</option>
             <option value="Detached">Detached</option>
@@ -99,8 +103,11 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="bedrooms">
-          No. of Bedrooms
+          <span>
+            <FontAwesomeIcon className="icon" icon={faBed} />
+          </span>
           <select
+            className="add-property__item property-input"
             id="bedrooms"
             name="bedrooms"
             value={fields.bedrooms}
@@ -115,8 +122,11 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="bathrooms">
-          No. of Bathrooms
+          <span>
+            <FontAwesomeIcon className="icon" icon={faBath} />
+          </span>
           <select
+            className="add-property__item property-input"
             id="bathrooms"
             name="bathrooms"
             value={fields.bathrooms}
@@ -131,8 +141,9 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="price">
-          Price
+          <span>£</span>
           <select
+            className="add-property__item property-input"
             id="price"
             name="price"
             value={fields.price}
@@ -147,8 +158,8 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="email">
-          Email
           <input
+            className="add-property__item property-input"
             id="email"
             name="email"
             value={fields.email}
@@ -157,7 +168,9 @@ const AddProperty = () => {
           />
         </label>
 
-        <button type="submit">Add</button>
+        <button className="add-property__item property-button" type="submit">
+          Add
+        </button>
       </form>
     </div>
   );

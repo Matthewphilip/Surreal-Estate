@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import {
-//   BsHouse,
-//   FaBath,
-//   FaBed,
-//   RiMoneyPoundCircleLine,
-//   GoLocation,
-//   MdOutlineMail,
-// } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  //   faStar,
+  faBath,
+  faBed,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import "../styles/property-card.css";
 
 const PropertyCard = ({
@@ -23,13 +22,21 @@ const PropertyCard = ({
     <div className="property-card">
       <h3>{title}</h3>
       <ul className="property-card__list">
-        <li className="type">{type}</li>
-        <li>{bedrooms}</li>
-        <li>{bathrooms}</li>
-        <li>{city}</li>
-        <li>{price}</li>
+        <li className="type-city">
+          {type} - {city}
+        </li>
         <li>
-          <a href={`mailto:${email}`} className="email">
+          <FontAwesomeIcon className="icon" icon={faBed} />
+          {bedrooms}
+        </li>
+        <li>
+          <FontAwesomeIcon className="icon" icon={faBath} />
+          {bathrooms}
+        </li>
+        <li>£{price}</li>
+        <li>
+          <a href={`mailto:${email}`} className="email-link">
+            <FontAwesomeIcon className="icon" icon={faEnvelope} />
             Email
           </a>
         </li>

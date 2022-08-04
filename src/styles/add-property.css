@@ -1,4 +1,39 @@
 .add-property {
-  padding: 10px;
-  background-color: rgb(217, 255, 127);
+  font-size: 25px;
+  text-align: center;
+}
+
+.add-property__form {
+  padding: 15px 0;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dotted rgb(255, 156, 34);
+  border-radius: 10%;
+  max-width: 30%;
+}
+
+.property-input {
+  margin: 10px;
+}
+
+.add-property__item {
+  font-size: 20px;
+  border-radius: 8%;
+}
+
+.property-button {
+  width: 15%;
+}
+
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  .add-property__form {
+    max-width: 80%;
+  }
+
+  .property-button {
+    width: 40%;
+  }
 }
